@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4395DE5C2061F05A00C94154 /* AnnotationPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4395DE5B2061F05A00C94154 /* AnnotationPin.swift */; };
 		43BDC6B420609C5C00C0BA91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BDC6B320609C5C00C0BA91 /* AppDelegate.swift */; };
 		43BDC6B620609C5C00C0BA91 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BDC6B520609C5C00C0BA91 /* ViewController.swift */; };
 		43BDC6B920609C5C00C0BA91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43BDC6B720609C5C00C0BA91 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4395DE5B2061F05A00C94154 /* AnnotationPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationPin.swift; sourceTree = "<group>"; };
 		43BDC6B020609C5B00C0BA91 /* ParkStashCodingTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkStashCodingTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43BDC6B320609C5C00C0BA91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43BDC6B520609C5C00C0BA91 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +39,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4395DE582061CF3200C94154 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4395DE5B2061F05A00C94154 /* AnnotationPin.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4395DE592061CF4700C94154 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4395DE5A2061CF6300C94154 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				43BDC6B520609C5C00C0BA91 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		43BDC6A720609C5B00C0BA91 = {
 			isa = PBXGroup;
 			children = (
@@ -56,8 +81,10 @@
 		43BDC6B220609C5B00C0BA91 /* ParkStashCodingTest */ = {
 			isa = PBXGroup;
 			children = (
+				4395DE5A2061CF6300C94154 /* Controllers */,
+				4395DE592061CF4700C94154 /* Models */,
+				4395DE582061CF3200C94154 /* Views */,
 				43BDC6B320609C5C00C0BA91 /* AppDelegate.swift */,
-				43BDC6B520609C5C00C0BA91 /* ViewController.swift */,
 				43BDC6B720609C5C00C0BA91 /* Main.storyboard */,
 				43BDC6BD20609C5C00C0BA91 /* Assets.xcassets */,
 				43BDC6BF20609C5C00C0BA91 /* LaunchScreen.storyboard */,
@@ -139,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4395DE5C2061F05A00C94154 /* AnnotationPin.swift in Sources */,
 				43BDC6BC20609C5C00C0BA91 /* ParkStashCodingTest.xcdatamodeld in Sources */,
 				43BDC6B620609C5C00C0BA91 /* ViewController.swift in Sources */,
 				43BDC6B420609C5C00C0BA91 /* AppDelegate.swift in Sources */,
