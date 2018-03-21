@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4395DE5C2061F05A00C94154 /* AnnotationPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4395DE5B2061F05A00C94154 /* AnnotationPin.swift */; };
+		4395DE5E2061FCE000C94154 /* ModleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4395DE5D2061FCDF00C94154 /* ModleManager.swift */; };
+		4395DE602061FDD400C94154 /* AnnotationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4395DE5F2061FDD400C94154 /* AnnotationModel.swift */; };
 		43BDC6B420609C5C00C0BA91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BDC6B320609C5C00C0BA91 /* AppDelegate.swift */; };
 		43BDC6B620609C5C00C0BA91 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BDC6B520609C5C00C0BA91 /* ViewController.swift */; };
 		43BDC6B920609C5C00C0BA91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43BDC6B720609C5C00C0BA91 /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		4395DE5B2061F05A00C94154 /* AnnotationPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationPin.swift; sourceTree = "<group>"; };
+		4395DE5D2061FCDF00C94154 /* ModleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModleManager.swift; sourceTree = "<group>"; };
+		4395DE5F2061FDD400C94154 /* AnnotationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationModel.swift; sourceTree = "<group>"; };
 		43BDC6B020609C5B00C0BA91 /* ParkStashCodingTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkStashCodingTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43BDC6B320609C5C00C0BA91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43BDC6B520609C5C00C0BA91 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +54,8 @@
 		4395DE592061CF4700C94154 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4395DE5D2061FCDF00C94154 /* ModleManager.swift */,
+				4395DE5F2061FDD400C94154 /* AnnotationModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -170,6 +176,8 @@
 				43BDC6BC20609C5C00C0BA91 /* ParkStashCodingTest.xcdatamodeld in Sources */,
 				43BDC6B620609C5C00C0BA91 /* ViewController.swift in Sources */,
 				43BDC6B420609C5C00C0BA91 /* AppDelegate.swift in Sources */,
+				4395DE602061FDD400C94154 /* AnnotationModel.swift in Sources */,
+				4395DE5E2061FCE000C94154 /* ModleManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

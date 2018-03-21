@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var menuTableView: UITableView!
     
     var sideMenuWidth: CGFloat!
+    var modelManager: ModelManager!
     
     let menuItems = [["Book a Spot", "List a Spot", "Past Booking"],
                      ["Payment", "Promos", "Wallet","My Profile", "Ratings"],
@@ -31,14 +32,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        sideMenuWidth = self.view.frame.size.width * (2/3)
-        sideMenuViewWidth.constant = sideMenuWidth
-        sideMenuLeadingConstraint.constant = -sideMenuWidth
         
-        sideMenuView.layer.shadowColor = UIColor.black.cgColor
-        sideMenuView.layer.shadowOpacity = 0.5
-        sideMenuView.layer.shadowOffset = CGSize(width: 5, height: 0 )
-
+        modelManager = ModelManager()
+        _setMapViewAnootations()
+        _setSideMenuLayout()
         _setProfile()
     }
    
@@ -91,6 +88,26 @@ class ViewController: UIViewController {
             self.sideMenuLeadingConstraint.constant = -self.sideMenuWidth
             self.view.layoutIfNeeded()
         })
+    }
+    
+    private func _setMapViewAnootations() {
+        for annotation in modelManager.annotationModels {
+            // create annotation
+            let annotation = AnnotationPin(title: annotation.title,
+                                           subtitle: annotation.subtitle,
+                                           coordinate: CLLocationCoordinate2DMake(annotation.latitude, annotation.logitude))
+            mapVIew.addAnnotation(annotation)
+        }
+    }
+    
+    private func _setSideMenuLayout() {
+        sideMenuWidth = self.view.frame.size.width * (2/3)
+        sideMenuViewWidth.constant = sideMenuWidth
+        sideMenuLeadingConstraint.constant = -sideMenuWidth
+        
+        sideMenuView.layer.shadowColor = UIColor.black.cgColor
+        sideMenuView.layer.shadowOpacity = 0.5
+        sideMenuView.layer.shadowOffset = CGSize(width: 5, height: 0 )
     }
     
     private func _setProfile() {
@@ -162,6 +179,13 @@ extension ViewController: UISearchBarDelegate {
                                                    subtitle: (alert.textFields?.first?.text)!,
                                                    coordinate: CLLocationCoordinate2DMake(latitude!, longitude!))
                     self.mapVIew.addAnnotation(annotation)
+                    
+                    // save annotation
+                    let model = AnnotationModel(title: searchBar.text!,
+                                                subtitle: (alert.textFields?.first?.text)!,
+                                                latitude: latitude!,
+                                                logitude: longitude!)
+                    self.modelManager.save(model: model)
                 }))
                 self.present(alert, animated: true, completion: nil)
             }
